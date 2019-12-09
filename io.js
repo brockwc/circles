@@ -7,6 +7,10 @@ io.on('connection', function (socket) {
   socket.on('add-circle', function (data) {
     io.emit('add-circle', data);
   })
+
+  socket.on('remove-circles', function () {
+    io.emit('remove-circles')
+  });
 });
 
 module.exports = io;
